@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="images/pc.ico" />
+    <title>Sorting</title>
+
+    <!-- Title logo -->
+    <link rel="icon" href="img/title-img.png" type="image/icon type" />
+
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/interface.css" />
+  </head>
+  <body>
+    <div id="menu">
+      <div id="sliders">
+        <div class="slider">
+          <label for="speed">Speed</label>
+          <input
+            class="slider-input"
+            name="speed"
+            id="speed"
+            type="range"
+            min="1"
+            max="100"
+            value="51"
+          />
+          <span class="count" id="speed-count">0</span>
+        </div>
+
+        <div class="slider">
+          <label for="elements">Elements</label>
+          <input
+            class="slider-input"
+            name="elements"
+            id="elements"
+            type="range"
+            min="5"
+            max="30"
+            value="5"
+          />
+          <span class="count" id="element-count">0</span>
+        </div>
+      </div>
+      <div id="algos">
+        <label>Algorithm</label>
+        <select id="algorithms">
+          <option value="bubble">Bubble Sort</option>
+         
+          <option value="insertion">Insertion Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="shell">Shell Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="merge">Merge Sort</option>
+          
+        </select>
+      </div>
+      <div id="sort-order">
+        <label>Order</label>
+        <select id="order">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </div>
+      <div id="buttons">
+        <input type="button" id="sort" class="sort green" value="Sort" />
+        <input type="button" id="stop" value="Stop" disabled />
+        <input type="button" id="reset" class="green" value="Reset" />
+        <input type="button" id="restart" class="green" value="Restart" />
+      </div>
+    </div>
+    
+    <div id="container"><div id="bars"></div></div>
+
+    <script>
+      const CONTAINER_WIDTH = 600;
+      let TOTAL_ELEMENTS = document.getElementById("elements").value;
+      let SPEED = document.getElementById("speed").value;
+      let container = document.getElementById("bars");
+      let bars = document.getElementsByClassName("bar");
+    </script>
+
+    <script src="script/interface.js"></script>
+    <script src="script/animation.js"></script>
+    <script src="script/algorithms.js"></script>
+    <script src="script/testing.js"></script>
+  </body>
+</html>
